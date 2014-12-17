@@ -12,7 +12,7 @@
 
     this.intervalId = window.setInterval(function () {
       view.step();
-    }, 300);
+    }, 200);
   };
 
   View.prototype.handleKeyEvent = function (event) {
@@ -28,6 +28,7 @@
   };
 
   View.prototype.step = function () {
+    this.board.ensureApple();
     this.board.snake.move();
     if (this.board.isOver()) {
       alert("Game Over!");
@@ -35,6 +36,7 @@
     }
     this.$el.empty();
     this.board.render(this.$el);
+    this.board.eatApple();
   };
 
 })();
