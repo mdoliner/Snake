@@ -1,0 +1,29 @@
+html, body, ul, li {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+ul {
+  list-style: none;
+}
+
+.snake {
+  width: 500px;
+  clear: both;
+}
+
+.row > li {
+  border: 2px solid black;
+  width: 20px;
+  height: 20px;
+  float: left;
+}
+
+.snake-seg {
+  background-color: #2ecc71;
+}
+
+.tile {
+  background-color: #3498db;
+}
